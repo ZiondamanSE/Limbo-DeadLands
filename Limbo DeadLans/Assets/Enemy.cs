@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
   public float speed;
   public float stoppingDistance;
+  public float retreatDistance;
 
   public Transform player;
 
