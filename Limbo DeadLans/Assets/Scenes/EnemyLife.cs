@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class playerLife : MonoBehaviour
+public class EnemyLife : MonoBehaviour
 {
 // how mush life the player has
   private float Life = 100f;
@@ -13,6 +13,7 @@ public class playerLife : MonoBehaviour
   [SerializeField] private Rigidbody2D rb;
   [SerializeField] private Transform pushbackCheker;
   [SerializeField] private LayerMask pushback;
+  [SerializeField] private LayerMask DestroyObject;
 
     private void FixedUpdate()
     {
@@ -26,9 +27,9 @@ public class playerLife : MonoBehaviour
           if (Life <= 0)
           {
             // Destroy object named player (there is a way to set it up so that is tags or layers that gets Destroy)
-            Destroy(GameObject.Find("Player"));
+            Destroy(GameObject.Find("Enemy"));
 
-            
+
           //  while(frame <= 3000000)
         //    {
             //  frame = frame + 1;
